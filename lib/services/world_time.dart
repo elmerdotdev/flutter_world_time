@@ -29,9 +29,8 @@ class WorldTime {
       } else if (symbol == '-') {
         now = now.subtract(Duration(hours: int.parse(offset)));
       }
-
       // set the time property
-      isDaytime = now.hour > 6 && now.hour < 20 ? true : false;
+      isDaytime = now.hour >= 6 && now.hour <= 18 ? true : false;
       time = DateFormat.jm().format(now);
     } catch (err) {
       print('caught error: $err');

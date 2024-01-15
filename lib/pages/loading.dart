@@ -20,6 +20,7 @@ class _LoadingState extends State<Loading> {
       'location': instance.location,
       'flag': instance.flag,
       'time': instance.time,
+      'isDaytime': instance.isDaytime,
     });
   }
 
@@ -27,7 +28,7 @@ class _LoadingState extends State<Loading> {
   void initState() {
     super.initState();
     setupWorldTime(
-        location: 'Vancouver', flag: 'canada.png', url: 'America/Vancouver');
+        location: 'Seoul', flag: 'south_korea.png', url: 'Asia/Seoul');
   }
 
   @override
